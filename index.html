@@ -26,7 +26,7 @@
 
         header {
             text-align: center;
-            padding: 40px 0;
+            padding: 40px 0 30px 0;
             border-bottom: 1px solid #21262d;
         }
 
@@ -50,11 +50,37 @@
         }
 
         .bio {
-            margin-top: 15px;
+            margin-top: 10px;
             color: #8b949e;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
+            font-weight: 500;
+        }
+
+        /* Styling Social & Contacts */
+        .contact-links {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            color: #58a6ff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            padding: 6px 12px;
+            border-radius: 20px;
+            transition: background-color 0.2s ease, border-color 0.2s ease;
+        }
+
+        .contact-btn:hover {
+            background-color: #21262d;
+            border-color: #58a6ff;
         }
 
         .section-title {
@@ -71,11 +97,15 @@
             gap: 20px;
         }
 
+        /* Kartu proyek dibuat clickable secara menyeluruh */
         .project-card {
+            display: block;
             background-color: #161b22;
             border: 1px solid #30363d;
             border-radius: 8px;
             padding: 20px;
+            text-decoration: none;
+            color: inherit;
             transition: transform 0.2s ease, border-color 0.2s ease;
         }
 
@@ -87,11 +117,10 @@
         .project-title {
             font-size: 1.2rem;
             color: #58a6ff;
-            text-decoration: none;
             font-weight: bold;
         }
 
-        .project-title:hover {
+        .project-card:hover .project-title {
             text-decoration: underline;
         }
 
@@ -128,6 +157,10 @@
             color: #58a6ff;
             text-decoration: none;
         }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -139,47 +172,54 @@
             <h1>Adi Lukman Nurhakim</h1>
             <p class="location">Purwokerto, Central Java, Indonesia</p>
             <p class="bio">Web Developer || Full Stack Developer || IT Support</p>
+            
+            <!-- Link Kontak & Media Sosial -->
+            <div class="contact-links">
+                <a href="mailto:emailkamu@gmail.com" class="contact-btn">✉ Email</a>
+                <a href="https://instagram.com/username_ig_kamu" target="_blank" class="contact-btn">📷 Instagram</a>
+                <a href="https://github.com/Adilukmannurhakim" target="_blank" class="contact-btn">💻 GitHub</a>
+            </div>
         </header>
 
         <!-- Daftar Proyek Portofolio -->
         <h2 class="section-title">Repositori & Proyek</h2>
         <div class="projects-grid">
 
-            <div class="project-card">
-                <a href="https://github.com/Adilukmannurhakim/chatbot" target="_blank" class="project-title">chatbot</a>
+            <a href="https://github.com/Adilukmannurhakim/chatbot" target="_blank" class="project-card">
+                <div class="project-title">chatbot</div>
                 <p class="project-desc">Aplikasi chatbot interaktif yang dibangun menggunakan JavaScript.</p>
                 <span class="tech-tag lang-js">● JavaScript</span>
-            </div>
+            </a>
 
-            <div class="project-card">
-                <a href="https://github.com/Adilukmannurhakim/kasir_pintar" target="_blank" class="project-title">kasir_pintar</a>
+            <a href="https://github.com/Adilukmannurhakim/kasir_pintar" target="_blank" class="project-card">
+                <div class="project-title">kasir_pintar</div>
                 <p class="project-desc">Sistem kasir pintar berbasis PHP untuk manajemen penjualan dan inventaris.</p>
                 <span class="tech-tag lang-php">● PHP</span>
-            </div>
+            </a>
 
-            <div class="project-card">
-                <a href="https://github.com/Adilukmannurhakim/kasir" target="_blank" class="project-title">kasir</a>
+            <a href="https://github.com/Adilukmannurhakim/kasir" target="_blank" class="project-card">
+                <div class="project-title">kasir</div>
                 <p class="project-desc">Aplikasi Point of Sale (POS) sederhana berbasis PHP.</p>
                 <span class="tech-tag lang-php">● PHP</span>
-            </div>
+            </a>
 
-            <div class="project-card">
-                <a href="https://github.com/Adilukmannurhakim/Rekapan" target="_blank" class="project-title">Rekapan</a>
+            <a href="https://github.com/Adilukmannurhakim/Rekapan" target="_blank" class="project-card">
+                <div class="project-title">Rekapan</div>
                 <p class="project-desc">Aplikasi rekapitulasi data menggunakan JavaScript.</p>
                 <span class="tech-tag lang-js">● JavaScript</span>
-            </div>
+            </a>
 
-            <div class="project-card">
-                <a href="https://github.com/Adilukmannurhakim/AdiLukman-Portofolio" target="_blank" class="project-title">AdiLukman-Portofolio</a>
+            <a href="https://github.com/Adilukmannurhakim/AdiLukman-Portofolio" target="_blank" class="project-card">
+                <div class="project-title">AdiLukman-Portofolio</div>
                 <p class="project-desc">Desain dan tampilan portofolio menggunakan CSS.</p>
                 <span class="tech-tag lang-css">● CSS</span>
-            </div>
+            </a>
 
         </div>
 
         <!-- Footer -->
         <footer>
-            <p>&copy; 2026 Adi Lukman Nurhakim. Lihat selengkapnya di <a href="https://github.com/Adilukmannurhakim" target="_blank">GitHub Profile</a>.</p>
+            <p>&copy; 2026 Adi Lukman Nurhakim | Hubungi via <a href="mailto:emailkamu@gmail.com">Email</a> atau <a href="https://instagram.com/username_ig_kamu" target="_blank">Instagram</a></p>
         </footer>
     </div>
 
