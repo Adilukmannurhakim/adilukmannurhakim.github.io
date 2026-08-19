@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adi Lukman Nurhakim</title>
+    <!-- Font Awesome CDN untuk Ikon Resmi -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -30,7 +32,7 @@
             border-bottom: 1px solid #21262d;
         }
 
-        header img {
+        header img.profile-img {
             width: 140px;
             height: 140px;
             border-radius: 50%;
@@ -60,27 +62,48 @@
 
         /* Styling Social & Contacts */
         .contact-links {
-            margin-top: 15px;
+            margin-top: 20px;
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 12px;
             flex-wrap: wrap;
         }
 
         .contact-btn {
-            color: #58a6ff;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #c9d1d9;
             text-decoration: none;
             font-size: 0.9rem;
             background-color: #161b22;
             border: 1px solid #30363d;
-            padding: 6px 12px;
+            padding: 8px 16px;
             border-radius: 20px;
-            transition: background-color 0.2s ease, border-color 0.2s ease;
+            transition: all 0.2s ease;
         }
 
-        .contact-btn:hover {
+        .contact-btn i {
+            font-size: 1.1rem;
+        }
+
+        /* Hover efek spesifik tiap aplikasi */
+        .contact-btn.email:hover {
+            border-color: #ea4335;
+            color: #ea4335;
             background-color: #21262d;
-            border-color: #58a6ff;
+        }
+
+        .contact-btn.instagram:hover {
+            border-color: #e1306c;
+            color: #e1306c;
+            background-color: #21262d;
+        }
+
+        .contact-btn.github:hover {
+            border-color: #f0f6fc;
+            color: #f0f6fc;
+            background-color: #21262d;
         }
 
         .section-title {
@@ -97,7 +120,6 @@
             gap: 20px;
         }
 
-        /* Kartu proyek dibuat clickable secara menyeluruh */
         .project-card {
             display: block;
             background-color: #161b22;
@@ -168,16 +190,22 @@
     <div class="container">
         <!-- Header / Profil -->
         <header>
-            <img src="https://github.com/Adilukmannurhakim.png" alt="Adi Lukman Nurhakim">
+            <img src="https://github.com/Adilukmannurhakim.png" alt="Adi Lukman Nurhakim" class="profile-img">
             <h1>Adi Lukman Nurhakim</h1>
             <p class="location">Purwokerto, Central Java, Indonesia</p>
             <p class="bio">Web Developer || Full Stack Developer || IT Support</p>
             
-            <!-- Link Kontak & Media Sosial -->
+            <!-- Link Kontak dengan Ikon Resmi Font Awesome -->
             <div class="contact-links">
-                <a href="mailto:adilukman665@@gmail.com" class="contact-btn">✉ Email</a>
-                <a href="https://instagram.com/man.adi_" target="_blank" class="contact-btn">📷 Instagram</a>
-                <a href="https://github.com/Adilukmannurhakim" target="_blank" class="contact-btn">💻 GitHub</a>
+                <a href="mailto:emailkamu@gmail.com" class="contact-btn email">
+                    <i class="fa-regular fa-envelope"></i> Email
+                </a>
+                <a href="https://instagram.com/username_ig_kamu" target="_blank" class="contact-btn instagram">
+                    <i class="fa-brands fa-instagram"></i> Instagram
+                </a>
+                <a href="https://github.com/Adilukmannurhakim" target="_blank" class="contact-btn github">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
             </div>
         </header>
 
@@ -219,7 +247,7 @@
 
         <!-- Footer -->
         <footer>
-            <p>&copy; 2026 Adi Lukman Nurhakim | Hubungi via <a href="adilukman665@gmail.com">Email</a> atau <a href="https://instagram.com/man.adi_" target="_blank">Instagram</a></p>
+            <p>&copy; 2026 Adi Lukman Nurhakim | Hubungi via <a href="mailto:emailkamu@gmail.com">Email</a> atau <a href="https://instagram.com/username_ig_kamu" target="_blank">Instagram</a></p>
         </footer>
     </div>
 
